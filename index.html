@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>John Mercedes | AI Algorithms + Behavior Design</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="John Mercedes | Design Engineer">
+  <meta name="description" content="AI algorithms and behavior design by NYC-based engineer John Mercedes.">
+  <meta name="author" content="John Mercedes">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="design engineer, UX designer, front-end developer, portfolio, NYC, AI algorithms">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jxyztplk.github.io/">
+  <meta property="og:title" content="John Mercedes · Design Engineer Portfolio">
+  <meta property="og:description" content="Explore the design & engineering work of John Mercedes - UX and front-end specialist based in NYC.">
+  <meta property="og:image" content="https://jxyztplk.github.io/images/portfolio.jpg">
+  <meta property="og:site_name" content="John Mercedes Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jxyztplk.github.io/">
+  <meta property="twitter:title" content="John Mercedes · Design Engineer Portfolio">
+  <meta property="twitter:description" content="Explore the design & engineering work of John Mercedes - UX and front-end specialist based in NYC.">
+  <meta property="twitter:image" content="https://jxyztplk.github.io/images/portfolio.jpg">
+  <meta property="twitter:creator" content="@jxyztplk">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://jxyztplk.github.io/">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="/images/eyeball.png">
+  <link rel="apple-touch-icon" href="/images/eyeball.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme and Color -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="https://drive.google.com">
+  <link rel="dns-prefetch" href="https://www.linkedin.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+  <style>
+    :root { color-scheme: light dark; }
+
+    /* Light default */
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --link: #0645ad;
+      --muted: #666666;
+    }
+
+    /* Dark when toggle is checked */
+    html:has(#theme-toggle:checked) {
+      --bg: #0a0a0a;
+      --fg: #f5f5f5;
+      --link: #8ab4f8;
+      --muted: #b3b3b3;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      transition: background-color .2s, color .2s;
+    }
+
+    body {
+      font-family: monospace;
+      padding-right: .5rem;
+      padding-left: .5rem;
+    }
+
+    a { color: var(--link); }
+    time, abbr { color: var(--muted); }
+
+    /* Toggle button */
+    .theme-btn {
+      position: fixed;
+      top: .75rem;
+      right: .75rem;
+      inline-size: 2.25rem;
+      block-size: 2.25rem;
+      display: grid;
+      place-items: center;
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid currentColor;
+      border-radius: 9999px;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    /* Icon swap */
+    #theme-toggle + .theme-btn .sun { display: inline; }
+    #theme-toggle:checked + .theme-btn .sun { display: none; }
+    #theme-toggle + .theme-btn .moon { display: none; }
+    #theme-toggle:checked + .theme-btn .moon { display: inline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html, body { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Theme toggle control -->
+  <input id="theme-toggle" type="checkbox" hidden>
+  <label for="theme-toggle" class="theme-btn" aria-label="Toggle color theme" title="Toggle theme">
+    <span class="sun" aria-hidden="true">☀️</span>
+    <span class="moon" aria-hidden="true">🌙</span>
+  </label>
+
+  <header role="banner">
+    <h1>John Mercedes</h1>
+    <p>Product design + engineering</p>
+    <p>Currently based in NYC</p>
+    <address>
+      <a href="mailto:contact.john.mercedes@gmail.com" aria-label="Email John Mercedes">contact.john.mercedes@gmail.com</a>
+    </address>
+
+    <nav aria-label="External links">
+      <ul role="list">
+        <li><a href="https://drive.google.com/file/d/12fR5CS1jrZc_L3zR02tXp6tL1Kl9Qdis/view" target="_blank" rel="noopener noreferrer" aria-label="View résumé (opens in new tab)">Résumé</a></li>
+        <li><a href="https://www.linkedin.com/in/johnmercedes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a></li>
+        <li><a href="https://github.com/jxyztplk" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">GitHub</a></li>
+        <li><a href="https://huggingface.co/jxyztplk" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face profile (opens in new tab)">Hugging Face</a></li>
+        <li><a href="https://x.com/jxyztplk" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile (opens in new tab)">X/Twitter</a></li>
+        <li><a href="https://jxyztplk.substack.com" target="_blank" rel="noopener noreferrer" aria-label="Newsletter subscription (opens in new tab)">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ul role="list">
+        <li data-tags="software,design">
+          <article>
+            <h3><a href="/projects/capture-classify">Capture Classify — share-sheet and toolbar ingestor</a></h3>
+            <div role="group" aria-label="Project tags">
+              <span aria-label="Software"><abbr title="Software">SW</abbr></span>
+              <span aria-label="Design"><abbr title="Design">DSN</abbr></span>
+            </div>
+            <div>
+              <time datetime="2025">2025</time> ·
+              <span>Next.js, TypeScript, WebExtensions, Supabase</span> ·
+              <a href="#" aria-label="View repository for Capture Classify">repo</a> ·
+              <a href="#" aria-label="View demo of Capture Classify">demo</a>
+            </div>
+          </article>
+        </li>
+
+        <li data-tags="software,research">
+          <article>
+            <h3><a href="/projects/signal-preserving-data-cleaning">Signal-Preserving Data Cleaning for Time Series</a></h3>
+            <div role="group" aria-label="Project tags">
+              <span aria-label="Software"><abbr title="Software">SW</abbr></span>
+              <span aria-label="Research"><abbr title="Research">R</abbr></span>
+            </div>
+            <div>
+              <time datetime="2025">2025</time> ·
+              <span>Python, pandas, NumPy, statsmodels</span> ·
+              <a href="#" aria-label="View repository for Signal-Preserving Data Cleaning">repo</a> ·
+              <a href="#" aria-label="View demo of Signal-Preserving Data Cleaning">demo</a>
+            </div>
+          </article>
+        </li>
+
+        <li data-tags="research,software">
+          <article>
+            <h3><a href="/projects/operator-mini">Operator-mini — sensorimotor alphabet learner</a></h3>
+            <div role="group" aria-label="Project tags">
+              <span aria-label="Research"><abbr title="Research">R</abbr></span>
+              <span aria-label="Software"><abbr title="Software">SW</abbr></span>
+            </div>
+            <div>
+              <time datetime="2025">2025</time> ·
+              <span>PyTorch, Gymnasium, Hydra, Weights & Biases</span> ·
+              <a href="#" aria-label="View repository for Operator-mini">repo</a> ·
+              <a href="#" aria-label="View demo of Operator-mini">demo</a>
+            </div>
+          </article>
+        </li>
+
+        <li data-tags="research,software">
+          <article>
+            <h3><a href="/projects/artificial-neurogenesis">Artificial Neurogenesis Library — developmental AI morphogenesis</a></h3>
+            <div role="group" aria-label="Project tags">
+              <span aria-label="Research"><abbr title="Research">R</abbr></span>
+              <span aria-label="Software"><abbr title="Software">SW</abbr></span>
+            </div>
+            <div>
+              <time datetime="2025">2025</time> ·
+              <span>Python, PyTorch, NumPy</span> ·
+              <a href="#" aria-label="View repository for Artificial Neurogenesis Library">repo</a> ·
+              <a href="#" aria-label="View demo of Artificial Neurogenesis Library">demo</a>
+            </div>
+          </article>
+        </li>
+
+        <li data-tags="software,design">
+          <article>
+            <h3><a href="/projects/alt-text-assist">Alt-Text Assist — UX designer-focused alt-text generator</a></h3>
+            <div role="group" aria-label="Project tags">
+              <span aria-label="Software"><abbr title="Software">SW</abbr></span>
+              <span aria-label="Design"><abbr title="Design">DSN</abbr></span>
+            </div>
+            <div>
+              <time datetime="2025">2025</time> ·
+              <span>Next.js, FastAPI, spaCy</span> ·
+              <a href="#" aria-label="View repository for Alt-Text Assist">repo</a> ·
+              <a href="#" aria-label="View demo of Alt-Text Assist">demo</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <span>Last updated: <time datetime="2025-05-23">May 23, 2025</time></span>
+      <span>© 2025 JM</span>
+    </div>
+  </footer>
+</body>
+</html>
